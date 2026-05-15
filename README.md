@@ -1,8 +1,7 @@
-# pwndrive-academy-writeup
+pwndrive-academy-writeup
 Documented a full Windows web exploitation walkthrough on GitHub involving: • Enumeration • MS17-010 analysis • Admin panel exposure • File upload exploitation • Remote command execution
 
-# PwnDrive Academy — PwntillDawn Walkthrough
-
+PwnDrive Academy — PwntillDawn Walkthrough
 Hack Enumerate Harder!. Eat. Sleep. Repeat.
 
 Target Information
@@ -113,6 +112,8 @@ Discovering the Admin Panel
 
 Navigating to:
 http://10.150.150.11/admin/
+<img width="816" height="464" alt="Screenshot 2026-05-13 115411" src="https://github.com/user-attachments/assets/f8e6011f-75dc-4d26-b44f-10375ba613a3" />
+
 revealed an exposed directory listing.
 
 The admin directory exposed:
@@ -134,8 +135,6 @@ Since the backend server was running PHP, I decided to upload a PHP web shell.
 
 Creating the Web Shell
 <?php system($_GET['cmd']); ?>
-
-
 Saved as:
 shell.php
 Uploading the Shell
